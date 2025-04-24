@@ -1,0 +1,147 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a237e;
+  color: white;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 10px;
+  height: 32px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+.navbar-links li {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a, .navbar-links button {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.navbar-links a:hover, 
+.navbar-links button:hover,
+.navbar-links a.active-link {
+  background-color: #3949ab;
+}
+
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.logout-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+}
+
+/* Mobile navbar styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar-logo {
+    padding: 15px;
+  }
+  
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1a237e;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .navbar-links.active {
+    max-height: 500px;
+  }
+  
+  .navbar-links li {
+    width: 100%;
+    height: auto;
+  }
+  
+  .navbar-links a, .navbar-links button {
+    width: 100%;
+    padding: 15px;
+    justify-content: flex-start;
+  }
+}
