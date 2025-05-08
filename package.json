@@ -5,9 +5,9 @@
   "dependencies": {
     "@material-ui/icons": "^4.11.3",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "antd": "^5.1.1",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "antd": "^5.12.7",
     "express": "^4.18.2",
     "firebase": "^9.15.0",
     "font-awesome": "^4.7.0",
